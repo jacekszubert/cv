@@ -1,0 +1,102 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\usepackage{catchfile}
+\newcommand{\getenv}[2][]{%
+ \CatchFileEdef{\temp}{"|kpsewhich --var-value #2"}{\endlinechar=-1\relax}%
+ \if\relax\detokenize{#1}\relax\temp\else\edef#1{\temp}\fi%
+}%
+
+\usepackage[nodayofweek]{datetime}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.75]{geometry}
+
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\nopagenumbers{}
+
+\name{Jacek}{Szubert}
+\address{ul. Raclawicka 69/4}{53-149 Wrocław}{Poland}
+\phone[mobile]{+48~791~379~682}
+\email{jacek.szubert@gmail.com}
+\social[linkedin]{jacek-szubert-16b76370}
+\social[skype]{szubert.jacek} %tbd
+%\photo[64pt][0.4pt]{picture}
+
+\begin{document}
+\makecvtitle
+
+\section{Experience}
+\cventry{2015--still}{DevOps Engineer}{SoftServe}{Wrocław (Poland)}{}{Used technologies:
+\begin{itemize}
+    \item[--]Amazon Web Services (AWS) stack: CloudFormation, Auto Scaling, Virtual Private Cloud (VPC), Elastic Compute Cloud (EC2), Simple Storage Service (S3) and other.
+    \item[--]Docker.
+    \item[--]Chef.
+    \item[--]HAProxy.
+\end{itemize}
+}
+\cventry{2013--2015}{Software Integration Engineer (SCM)}{Nokia / Nokia Solutions and Networks}{Wrocław (Poland)}{}{Maintaining and developing continous integration systems, as a technical leader, for two projects:
+\begin{itemize}
+    \item[--]Administration of physical (HP Proliants, HP Blades, NetApp) and virtualised (in Eucalyptus \& S3 (Amazon AWS), Citrix XenServer and VMware vSphere technologies) servers and storages.
+    \item[--]Administration of RHEL and Debian based Linux systems, including usage of tools for automated management like Ansible.
+    \item[--]Scripting in Bash and Python.
+    \item[--]Developing and optimizing continous integration flows (Jenkins, SVN, GIT) and release processes of C/C++ and Java projects.
+    \item[--]Quality assurance - analysis using SonarQube and tools for C/C++, preparation for TL9000 audit.
+    \item[--]Supporting developers and testers in their daily activities.
+    \item[--]Taking over a project from other company, responsible both for competence and infrastructure transfer.
+\end{itemize}
+}
+\cventry{2012}{OSS Technical Support -- internship}{Nokia Siemens Networks}{Wrocław (Poland)}{}{Local laboratory administration, basic configuration and verification of OSS systems.}
+\subsection{Miscellaneous}
+\cventry{2011--still}{Administration of own web page and discussion forum}{}{}{}{}
+
+\section{Education}
+\cventry{2013--2015}{Master's degree}{Wrocław University of Technology}{}{}{Telecommunication --- Mobile Networks.}
+\cventry{2009--2013}{Bachelor's degree}{Wrocław University of Technology}{}{}{Electronics and Telecommunication --- Information and Communication Networks.}
+\cventry{2009--2013}{Vocational Technical High School}{CKU}{Częstochowa}{}{Occupational safety and health.}
+
+\section{Languages}
+\cvitemwithcomment{English}{professional working proficiency}{IELTS}
+\cvitemwithcomment{Polish}{native}{}
+
+\section{Skills}
+\cvitem{administration}{Linux (RHEL and Debian based).}
+\cvitem{scripting}{Bash, Python.}
+\cvitem{CVS}{Subversion, GIT.}
+\cvitem{CM}{Ansible, Chef, basics of Puppet}
+\cvitem{CI}{Jenkins.}
+\cvitem{code analysis}{Sonar and related tools.}
+\cvitem{virtualization and cloud computing}{
+    \begin{itemize}
+        \item[--] Amazon Web Services (AWS)
+        \item[--] Citrix XenServer.
+        \item[--] VMware.
+        \item[--] Docker and Vagrant.
+    \end{itemize}}
+\cvitem{networking}{Practical understanding of TCP/IP networks, configuring network elements, troubleshooting.}
+\cvitem{project management tools}{Redmine, JIRA.}
+\cvitem{programming}{Basics of C++.}
+\cvitem{databases}{Basics of SQL and PL/SQL.}
+
+\section{Trainings and certifications}
+\cvitem{embedded}{Designing Embedded Systems with Yocto (Doulos).}
+\cvitem{networking}{Cisco Certified Network Associate.}
+\cvitem{english}{IELTS general training certification (C1).}
+
+\section{Other}
+\cvlistitem{Driving licence, category B.}
+
+\section{Interests}
+\cvlistitem{Scorpiones (Animalia, Arachnida).}
+\cvlistitem{Snooker.}
+\cvlistitem{Space exploration.}
+
+\newdateformat{mydate}{\THEDAY\ \monthname[\THEMONTH] \THEYEAR}
+
+\getenv[\cvpl]{cvpl}%
+\ifdefstring{\cvpl}{true}{
+\cfoot{\footnotesize{I hereby agree for processing the following personal information strictly for the purposes of job recruitment \newline in accordance with the regulation for the protection of personal data passed on 29.08.1997, Dz.U nr 133 poz. 883.}\newline\hspace{1in}{\tiny{\shortdate\today}}}
+}{
+\cfoot{\tiny{\shortdate\today}}
+}
+
+\end{document}
