@@ -6,10 +6,10 @@ endif
 
 .PHONY: clean all
 
-all: Jacek_Szubert.pdf
+all: cv.pdf
 
 clean:
 	@rm -f *.pdf *.log *.out *.aux
 
-Jacek_Szubert.pdf: Jacek_Szubert.tex
-	lang=$(lang) $(TEX) Jacek_Szubert.tex
+cv.pdf: cv.tex
+	lang=$(lang) $(TEX) cv.tex
