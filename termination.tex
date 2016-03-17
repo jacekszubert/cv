@@ -1,0 +1,41 @@
+\documentclass[a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[MeX]{polski}
+\usepackage{textcomp}
+\setlength{\parindent}{1cm}
+\linespread{1.3}
+
+\renewcommand{\today}{\CityOfTermination, \number\day.\number\month.\number\year}
+
+%Your details
+\def\Name{Jacek Szubert}
+\def\Address{ul. Raclawicka 69/4 \\ 53-149 Wrocław \\ Poland}
+\def\Phone{+48~791~379~682}
+\def\Email{jacek.szubert@gmail.com}
+\def\Details{\Name \\ \Address \\ \Phone \\ \Email}
+
+%Company details
+\def\CompanyName{Company}
+\def\CompanyAddress{Company address}
+\def\CompanyDetails{\CompanyName \\ \CompanyAddress}
+
+%Contract details
+\def\DateOfContract{1.01.2001}
+\def\CityOfContract{Wrocław}
+\def\CityOfTermination{\CityOfContract}
+\def\NoticePeriod{1 miesiąc}
+
+\address{\Details}
+\begin{document}
+\begin{letter}{\CompanyDetails}
+{
+    \opening{\noindent Wypowiedzenie umowy o pracę}{}
+        Niniejszym wypowiadam umowę o pracę zawartą dnia \DateOfContract{} %
+        w miejscowości \CityOfContract{} pomiędzy \Name{} a \CompanyName{} z zachowaniem %
+        okresu wypowiedzenia wynoszącego \NoticePeriod.
+    \closing{Z poważaniem, \\ \ldots \\ \Name}}
+{\noindent Potwierdzam otrzymanie wypowiedzenia \\ \ldots}
+
+\end{letter}
+\end{document}
+
