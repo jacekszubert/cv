@@ -2,16 +2,14 @@
 > Full toolkit needed to change a job
 
 ## Prerequisites
-Packages required to build each component.
-
-### cv.pdf
+Packages required to build each component:
 - make
 - texlive-base
+
+### cv.pdf
 - texlive-latex-extra
 
 ### termination.pdf
-- make
-- texlive-base
 - texlive-lang-polish
 
 ## Building
