@@ -17,9 +17,9 @@ Packages required to build each component.
 ## Building
 To build final PDF documents use GNU make:
 ```
-make \[all\]
-make [cv.pdf](cv.pdf)
-make [termination.pdf](termination.pdf)
+make [all]
+make cv.pdf
+make termination.pdf
 ```
 
 ## License
