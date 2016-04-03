@@ -10,6 +10,7 @@
 \moderncvstyle{classic}
 \moderncvcolor{blue}
 \nopagenumbers{}
+\getenv[\lang]{lang}
 
 \name{Jacek}{Szubert}
 \address{ul. Raclawicka 69/4}{53-149 Wrocław}{Poland}
@@ -24,11 +25,12 @@
 \section{Experience}
 \cventry{2015--still}{DevOps Engineer}{SoftServe}{Wrocław (Poland)}{}{Used technologies:
 \begin{itemize}
-    \item Amazon Web Services (AWS) stack: CloudFormation, Auto Scaling, Virtual Private Cloud (VPC), %
-        Elastic Compute Cloud (EC2), Simple Storage Service (S3) and other.
+    \item Amazon Web Services (AWS) stack: CloudFormation, Elastic Compute Cloud (EC2), EC2 Container Service (ECS), %
+        Relational Database Service (RDS), Auto Scaling, Virtual Private Cloud (VPC), %
+        Simple Storage Service (S3), Simple Email Service (SES) and other.
     \item Docker.
     \item Chef.
-    \item HAProxy.
+    \item Jenkins.
 \end{itemize}
 }
 \cventry{2013--2015}{Software Integration Engineer (SCM)}{Nokia / Nokia Solutions and Networks}%
@@ -53,7 +55,7 @@
 \cventry{2013--2015}{Master's degree}{Wrocław University of Technology}{}{}{Telecommunication --- Mobile Networks.}
 \cventry{2009--2013}{Bachelor's degree}{Wrocław University of Technology}{}{}%
     {Electronics and Telecommunication --- Information and Communication Networks.}
-\cventry{2009--2013}{Vocational Technical High School}{CKU}{Częstochowa}{}{Occupational safety and health.}
+%\cventry{2009--2013}{Vocational Technical High School}{CKU}{Częstochowa}{}{Occupational safety and health.}
 
 \section{Languages}
 \cvitemwithcomment{english}{professional working proficiency}{IELTS}
@@ -61,7 +63,7 @@
 
 \section{Skills}
 \cvitem{administration}{Linux (RHEL and Debian based distributions, CoreOS).}
-\cvitem{scripting}{Bash, Python.}
+\cvitem{scripting}{Bash, Python (including libraries like Flask and SQLAlchemy).}
 \cvitem{CVS}{Subversion, GIT.}
 \cvitem{CM}{Ansible, Chef, basics of Puppet.}
 \cvitem{CI}{Jenkins.}
@@ -84,7 +86,10 @@
 \cvitem{english}{IELTS general training certification (C1).}
 
 \section{Other}
-\cvlistitem{Driving licence, category B.}
+\ifdefstring{\lang}{au}{
+    \cvlistitem{Australian visa -- ready to start work in Australia in 3 weeks (2 weeks of the period of notice and 1 week for relocation).}
+}{}
+\cvlistitem{Driving licence.}
 
 \section{Interests}
 \cvlistitem{Scorpiones (Animalia, Arachnida).}
@@ -93,7 +98,6 @@
 
 \newdateformat{mydate}{\THEDAY\ \monthname[\THEMONTH] \THEYEAR}
 
-\getenv[\lang]{lang}
 \ifdefstring{\lang}{pl}{
     \cfoot{\footnotesize{I hereby agree for processing the following personal information strictly for %
     the purposes of job recruitment \newline in accordance with the regulation for the protection of %
