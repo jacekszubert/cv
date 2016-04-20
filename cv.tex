@@ -6,6 +6,9 @@
 
 \input{skypesymbol}
 \input{getenv}
+\newcommand*{\pin}{%
+    \includegraphics[height=\heightof{M}]{pin}
+}
 
 \moderncvstyle{classic}
 \moderncvcolor{blue}
@@ -13,7 +16,7 @@
 \getenv[\lang]{lang}
 
 \name{Jacek}{Szubert}
-\address{Wroclaw, Poland}
+\address{\pin Wroclaw, Poland}
 \phone[mobile]{+48~791~379~682}
 \email{jacek.szubert@gmail.com}
 \extrainfo{\skypesymbol \href{skype:szubert.jacek}{szubert.jacek}}
@@ -21,11 +24,11 @@
 
 \begin{document}
 \makecvtitle
-\section{Summary}
-    DevOps engineer focused on Linux, virtualization platforms (including but not limited to AWS), %
-    automatization of software integration and delivery process (Jenkins, Docker) and managing infrastructure as a code (Ansible, Chef, basics of Puppet).
-    \ifdefstring{\lang}{au}{\newline \newline In possession of an Australian visa allowing to get a full time job - open to job opportunities. %
-    Ready to start work in Australia in 3 weeks (2 weeks of the period of notice and 1 week for relocation).}{}
+DevOps engineer focused on Linux, virtualization platforms (including but not limited to AWS), %
+automatization of software integration and delivery process (Jenkins, Docker) and managing infrastructure as a code (Ansible, Chef, basics of Puppet).
+
+\ifdefstring{\lang}{au}{\newline \newline In possession of an Australian visa allowing to get a full time job - open to job opportunities. %
+Ready to start work in Australia in 3 weeks (2 weeks of the period of notice and 1 week for relocation).}{}
 
 \section{Experience}
 \cventry{2015--still}{DevOps Engineer}{SoftServe}{Wroclaw (Poland)}{}{

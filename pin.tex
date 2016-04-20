@@ -1,0 +1,37 @@
+\documentclass{standalone}
+
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\newdimen\pinA
+\newdimen\pinB
+\newdimen\pinC
+
+\setlength{\pinA}{10mm}
+\setlength{\pinB}{20mm}
+\setlength{\pinC}{40mm}
+
+\definecolor{pin}{gray}{0.55}
+
+\begin{document}
+  \begin{tikzpicture}
+    \useasboundingbox (-\pinB, -\pinC) (\pinB, \pinB);
+    \pgfmathsetmacro{\pinAngle}{acos(\pinB/\pinC)}%
+    \pgfmathsetmacro{\pinAngleRight}{270+\pinAngle}%
+    \path[fill=pin, even odd rule]
+      (\pinAngleRight:\pinB)
+      arc[
+        at={(0,0)},
+        start angle=\pinAngleRight,
+        delta angle=360-2*\pinAngle,
+        radius=\pinB,
+      ]
+      -- (0, -\pinC) -- cycle
+      circle[
+        at={(0,0)},
+        radius=\pinA,
+      ]
+    ;  
+  \end{tikzpicture}
+\end{document}
+
