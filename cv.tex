@@ -2,7 +2,7 @@
 
 \usepackage[nodayofweek]{datetime}
 \usepackage[utf8]{inputenc}
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.80]{geometry}
 
 \input{skypesymbol}
 \input{getenv}
@@ -13,17 +13,23 @@
 \getenv[\lang]{lang}
 
 \name{Jacek}{Szubert}
-\address{ul. Raclawicka 69/4}{53-149 Wrocław}{Poland}
+\address{Wroclaw, Poland}
 \phone[mobile]{+48~791~379~682}
 \email{jacek.szubert@gmail.com}
 \extrainfo{\skypesymbol \href{skype:szubert.jacek}{szubert.jacek}}
 \social[linkedin]{jacek-szubert-16b76370}
-%\photo[64pt][0.4pt]{picture}
 
 \begin{document}
 \makecvtitle
+\section{Summary}
+    DevOps engineer focused on Linux, virtualization platforms (including but not limited to AWS), %
+    automatization of software integration and delivery process (Jenkins, Docker) and managing infrastructure as a code (Ansible, Chef, basics of Puppet).
+    \ifdefstring{\lang}{au}{\newline \newline In possession of an Australian visa allowing to get a full time job - open to job opportunities. %
+    Ready to start work in Australia in 3 weeks (2 weeks of the period of notice and 1 week for relocation).}{}
+
 \section{Experience}
-\cventry{2015--still}{DevOps Engineer}{SoftServe}{Wrocław (Poland)}{}{Used technologies:
+\cventry{2015--still}{DevOps Engineer}{SoftServe}{Wroclaw (Poland)}{}{
+    Developing CI \& CD pipelines on AWS infrastructure for web services. Used technologies:
 \begin{itemize}
     \item Amazon Web Services (AWS) stack: CloudFormation, Elastic Compute Cloud (EC2), EC2 Container Service (ECS), %
         Relational Database Service (RDS), Auto Scaling, Virtual Private Cloud (VPC), %
@@ -34,7 +40,7 @@
 \end{itemize}
 }
 \cventry{2013--2015}{Software Integration Engineer (SCM)}{Nokia / Nokia Solutions and Networks}%
-    {Wrocław (Poland)}{}{Maintaining and developing continous integration systems, as a technical leader, for two projects:
+    {Wroclaw (Poland)}{}{Technical leader for DevOps/SysAdmin teams responsible for two projects.
 \begin{itemize}
     \item Administration of physical (HP Server Hardware, NetApp) and virtualised (in Eucalyptus \& S3 (compatible with Amazon Web Services (AWS)), %
         Citrix XenServer and VMware vSphere technologies) servers and storages.
@@ -43,17 +49,17 @@
     \item Developing and optimizing continous integration flows (Jenkins, SVN, GIT) and release processes of C/C++ and Java projects.
     \item Quality assurance - analysis using SonarQube and tools for C/C++, preparation for TL9000 audit.
     \item Supporting developers and testers in their daily activities.
-    \item Taking over a project from other company, responsible both for competence and infrastructure transfer.
+    \item Taking over a project from other company, responsible for both competence and infrastructure transfer.
 \end{itemize}
 }
-\cventry{2012}{OSS Technical Support -- internship}{Nokia Siemens Networks}{Wrocław (Poland)}{}%
+\cventry{2012}{OSS Technical Support -- internship}{Nokia Siemens Networks}{Wroclaw (Poland)}{}%
     {Local laboratory administration, basic configuration and verification of OSS systems.}
 \subsection{Miscellaneous}
 \cventry{2011--still}{Administration of own web page and discussion forum}{}{}{}{}
 
 \section{Education}
-\cventry{2013--2015}{Master's degree}{Wrocław University of Technology}{}{}{Telecommunication --- Mobile Networks.}
-\cventry{2009--2013}{Bachelor's degree}{Wrocław University of Technology}{}{}%
+\cventry{2013--2015}{Master's degree}{Wroclaw University of Technology}{}{}{Telecommunication --- Mobile Networks.}
+\cventry{2009--2013}{Bachelor's degree}{Wroclaw University of Technology}{}{}%
     {Electronics and Telecommunication --- Information and Communication Networks.}
 %\cventry{2009--2013}{Vocational Technical High School}{CKU}{Częstochowa}{}{Occupational safety and health.}
 
@@ -86,9 +92,6 @@
 \cvitem{english}{IELTS general training certification (C1).}
 
 \section{Other}
-\ifdefstring{\lang}{au}{
-    \cvlistitem{Australian visa -- ready to start work in Australia in 3 weeks (2 weeks of the period of notice and 1 week for relocation).}
-}{}
 \cvlistitem{Driving licence.}
 
 \section{Interests}
