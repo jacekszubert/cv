@@ -2,8 +2,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage[MeX]{polski}
 \usepackage{textcomp}
+\usepackage[nodayofweek]{datetime}
+
 \setlength{\parindent}{1cm}
 \linespread{1.3}
+
+\input{getenv}
+\getenv[\porozumienie]{porozumienie}
 
 \renewcommand{\today}{\CityOfTermination, \number\day.\number\month.\number\year}
 
@@ -23,19 +28,30 @@
 \def\DateOfContract{date}
 \def\CityOfContract{city}
 \def\CityOfTermination{\CityOfContract}
-\def\NoticePeriod{period}
+
+%Termination duration - exact date for settlement or duration for other cases
+\def\TerminationDuration{2 tygodnie}
 
 \address{\Details}
 \begin{document}
 \begin{letter}{\CompanyDetails}
 {
-    \opening{\noindent Wypowiedzenie umowy o pracę}{}
-        Niniejszym wypowiadam umowę o pracę zawartą dnia \DateOfContract{} %
-        w miejscowości \CityOfContract{} pomiędzy \Name{} a \CompanyName{} z zachowaniem %
-        okresu wypowiedzenia wynoszącego \NoticePeriod.
-    \closing{Z poważaniem, \\ \ldots \\ \Name}}
-{\noindent Potwierdzam otrzymanie wypowiedzenia \\ \ldots}
+    \ifdefstring{\porozumienie}{true}{
+        \opening{\noindent Porozumienie stron w sprawie rozwiązania mowy o pracę}{}
+            Strony zgodnie postanawiają, że z dniem \TerminationDuration ulega %
+            rozwiązaniu umowa o pracę zawarta w dniu \DateOfContract{} w miejscowości %
+            \CityOfContract{} pomiędzy \Name{} a \CompanyName{}. \\ \\
+            \begin{minipage}[c]{0.5\textwidth} \ldots \\ Pracownik \end{minipage}
+            \begin{minipage}[c]{0.5\textwidth} \ldots \\ Pracodawca \end{minipage}
 
+    }{
+        \opening{\noindent Wypowiedzenie umowy o pracę}{}
+            Niniejszym wypowiadam umowę o pracę zawartą dnia \DateOfContract{} %
+            w miejscowości \CityOfContract{} pomiędzy \Name{} a \CompanyName{} z zachowaniem %
+            okresu wypowiedzenia wynoszącego \TerminationDuration.
+        \closing{Z poważaniem, \\ \ldots \\ \Name}
+        {\noindent Potwierdzam otrzymanie wypowiedzenia \\ \ldots}
+    }
+}
 \end{letter}
 \end{document}
-
