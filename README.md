@@ -5,6 +5,7 @@
 Packages required to build each component:
 - make
 - texlive-base
+- texlive-full
 
 ### cv.pdf
 - texlive-latex-extra

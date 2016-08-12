@@ -16,7 +16,7 @@
 \getenv[\lang]{lang}
 
 \name{Jacek}{Szubert}
-\address{\pin Wroclaw, Poland}
+\address{\pin Berlin, Germany}
 \phone[mobile]{+48~791~379~682}
 \email{jacek.szubert@gmail.com}
 \extrainfo{\skypesymbol \href{skype:szubert.jacek}{szubert.jacek}}
@@ -24,37 +24,39 @@
 
 \begin{document}
 \makecvtitle
-DevOps engineer focused on Linux, virtualization platforms (including but not limited to AWS), %
-automatization of software integration and delivery process (Jenkins, Docker) and managing infrastructure as a code (Ansible, Chef, basics of Puppet).
+Experienced DevOps engineer focused on system administration, cloud computing, managing infrastructure as a code, %
+automatization of software integration and delivery process and configuration management.
+\\[6pt]
+Key technologies: Linux, AWS, Docker, Ansible, Chef, basics of Puppet.
 
-\ifdefstring{\lang}{au}{\newline \newline In possession of an Australian visa allowing to get a full time job - open to job opportunities. %
-Ready to start work in Australia in 3 weeks (2 weeks of the period of notice and 1 week for relocation).}{}
+\ifdefstring{\lang}{au}{\newline \newline In possession of an Australian visa %
+allowing to get a full time job. Available from 1.01.2017.}{}
 
 \section{Experience}
-\cventry{2015--still}{DevOps Engineer}{SoftServe}{Wroclaw (Poland)}{}{
-    Developing CI \& CD pipelines on AWS infrastructure for web services. Used technologies:
-\begin{itemize}
-    \item Amazon Web Services (AWS). %
-    \item Docker.
-    \item Chef.
-    \item Jenkins.
-\end{itemize}
+
+\cventry{2016--still}{DevOps Engineer (freelance)}{eHealth Systems Africa}{Berlin (Germany)}{}{
+    Working on multiple projects supporting public health in Western Africa. Implementing and optimizing monitoring solutions, deployment strategies, mitigating security risks, reducing infrastructure costs.
 }
+
+\cventry{2015--2016}{DevOps Engineer}{SoftServe}{Wroclaw (Poland)}{}{
+    Developing infrastructure and CI \& CD pipelines for web services.
+}
+
 \cventry{2013--2015}{Software Integration Engineer (SCM)}{Nokia / Nokia Solutions and Networks}%
     {Wroclaw (Poland)}{}{Technical leader for DevOps/SysAdmin teams responsible for two projects.
 \begin{itemize}
-    \item Administration of physical (HP Server Hardware, NetApp) and virtualised (in Eucalyptus \& S3), %
-        Citrix XenServer and VMware vSphere technologies) servers and storages.
+    \item Administration of physical and virtualised servers and storages.
     \item Administration of RHEL and Debian based Linux systems, including usage of tools for automated management like Ansible.
     \item Scripting in Bash and Python.
-    \item Developing and optimizing continous integration flows (Jenkins, SVN, GIT) and release processes of C/C++ and Java projects.
-    \item Quality assurance - analysis using SonarQube and tools for C/C++, preparation for TL9000 audit.
-    \item Supporting developers and testers in their daily activities.
+    \item Developing and optimizing continous integration flows and release processes of C/C++ and Java projects.
+    \item Quality assurance - analysis using SonarQube, preparation for TL9000 audit.
     \item Taking over a project from other company, responsible for both competence and infrastructure transfer.
 \end{itemize}
 }
+
 \cventry{2012}{OSS Technical Support -- internship}{Nokia Siemens Networks}{Wroclaw (Poland)}{}%
     {Local laboratory administration, basic configuration and verification of OSS systems.}
+
 \subsection{Miscellaneous}
 \cventry{2011--still}{Administration of own web page and discussion forum}{}{}{}{}
 
@@ -69,32 +71,29 @@ Ready to start work in Australia in 3 weeks (2 weeks of the period of notice and
 \cvitemwithcomment{polish}{native}{}
 
 \section{Skills}
-\cvitem{administration}{Linux (RHEL and Debian based distributions, CoreOS).}
-\cvitem{scripting}{Bash, Python (including libraries like Flask and SQLAlchemy).}
-\cvitem{CVS}{Subversion, GIT.}
-\cvitem{CM}{Ansible, Chef, basics of Puppet.}
-\cvitem{CI}{Jenkins.}
-\cvitem{code analysis}{SonarQube and related tools.}
-\cvitem{virtualization and cloud computing}{
+\cvitem{administration}{Linux - RHEL and Debian based distributions, CoreOS.}
+\cvitem{scripting}{Bash, Python (including libraries like boto(3), docker-py, Flask, SQLAlchemy, basics of Django).}
+\cvitem{cvs}{GIT, Subversion.}
+\cvitem{cm}{Ansible, Chef, basics of Puppet.}
+\cvitem{ci}{Jenkins, TravisiCI.}
+\cvitem{cloud computing \& virtualization}{
     \begin{itemize}
-        \item Amazon Web Services (AWS), Eucalyptus.
-        \item Citrix XenServer.
-        \item VMware vSphere.
-        \item Docker, Vagrant.
+        \item Amazon Web Services (wide variety of services including development of tools running on Lambda and utilizing SQS, developing infrastructure with CloudFormation and Beanstalk, managing containers with ECS), Eucalyptus.
+        \item Citrix XenServer, VMware vSphere.
+        \item Docker.
     \end{itemize}}
-\cvitem{networking}{Practical understanding of TCP/IP networks, configuring network elements, troubleshooting.}
-\cvitem{project management tools}{Redmine, JIRA.}
-\cvitem{programming}{Basics of C++.}
-\cvitem{databases}{Basics of SQL and PL/SQL.}
+\cvitem{monitoring}{NewRelic, Librato, CloudWatch.}
+\cvitem{networking}{Practical understanding of TCP/IP networks, configuring network elements, troubleshooting. VPCs.}
+\cvitem{rdms}{Administration of PostgreSQL, basics of SQL.}
+\cvitem{nosql \& bigdata}{Basics of administration of CouchDB and ELK stack.}
+\cvitem{code analysis}{SonarQube and related tools.}
+\cvitem{hardware}{HP Server Hardware, NetApp.}
 
 \section{Trainings and certifications}
 \cvitemwithcomment{cloud computing}{AWS Certified Developer -- Associate.}{AWS-ADEV-3416}
 \cvitem{embedded}{Designing Embedded Systems with Yocto (Doulos).}
 \cvitem{networking}{Cisco Certified Network Associate.}
 \cvitem{english}{IELTS general training certification (C1).}
-
-\section{Other}
-\cvlistitem{Driving licence.}
 
 \newdateformat{mydate}{\THEDAY\ \monthname[\THEMONTH] \THEYEAR}
 
