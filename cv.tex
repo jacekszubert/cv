@@ -2,12 +2,15 @@
 
 \usepackage[nodayofweek]{datetime}
 \usepackage[utf8]{inputenc}
-\usepackage[scale=0.80]{geometry}
+\usepackage[scale=0.77]{geometry}
 
 \input{skypesymbol}
 \input{getenv}
-\newcommand*{\pin}{%
+\newcommand{\pin}{
     \includegraphics[height=\heightof{M}]{pin}
+}
+\newcommand{\newpara}{
+    \vskip 0.2cm
 }
 
 \moderncvstyle{classic}
@@ -24,29 +27,31 @@
 
 \begin{document}
 \makecvtitle
-Experienced DevOps engineer focused on system administration, cloud computing, managing infrastructure as a code, %
-automatization of software integration and delivery process and configuration management.
-\\[6pt]
-Key technologies: Linux, AWS, Docker, Ansible, Chef, basics of Puppet.
+Experienced DevOps engineer focused on cloud computing, managing infrastructure as a code, %
+automatization of software integration and deployment process and configuration management.
+\newpara
+Key technologies: Linux, AWS, Docker, Ansible, Chef, Python.
 
-\ifdefstring{\lang}{au}{\newline \newline In possession of an Australian visa %
-allowing to get a full time job. Available from 1.01.2017.}{}
+\ifdefstring{\lang}{au}{\newpara In possession of an Australian visa allowing to get a full time job. %
+Available from 2.01.2017.}{}
 
 \section{Experience}
 
 \cventry{2016--still}{DevOps Engineer (freelance)}{eHealth Systems Africa}{Berlin (Germany)}{}{
-    Working on multiple projects supporting public health in Western Africa. Implementing and optimizing monitoring solutions, deployment strategies, mitigating security risks, reducing infrastructure costs.
+    Working on multiple projects supporting public health in Western Africa. %
+    Implementing and optimizing infrastructure management approach, deployment strategies, %
+    monitoring solutions, mitigating security risks, reducing infrastructure costs.
 }
 
 \cventry{2015--2016}{DevOps Engineer}{SoftServe}{Wroclaw (Poland)}{}{
-    Developing infrastructure and CI \& CD pipelines for web services.
+    Developing cloud based infrastructure and CI \& CD pipelines for web services.
 }
 
 \cventry{2013--2015}{Software Integration Engineer (SCM)}{Nokia / Nokia Solutions and Networks}%
     {Wroclaw (Poland)}{}{Technical leader for DevOps/SysAdmin teams responsible for two projects.
 \begin{itemize}
     \item Administration of physical and virtualised servers and storages.
-    \item Administration of RHEL and Debian based Linux systems, including usage of tools for automated management like Ansible.
+    \item Administration of Linux systems, including usage of configuration management tools.
     \item Scripting in Bash and Python.
     \item Developing and optimizing continous integration flows and release processes of C/C++ and Java projects.
     \item Quality assurance - analysis using SonarQube, preparation for TL9000 audit.
@@ -70,20 +75,22 @@ allowing to get a full time job. Available from 1.01.2017.}{}
 \cvitemwithcomment{english}{professional working proficiency}{IELTS}
 \cvitemwithcomment{polish}{native}{}
 
+\clearpage
+
 \section{Skills}
 \cvitem{administration}{Linux - RHEL and Debian based distributions, CoreOS.}
-\cvitem{scripting}{Bash, Python (including libraries like boto(3), docker-py, Flask, SQLAlchemy, basics of Django).}
-\cvitem{cvs}{GIT, Subversion.}
+\cvitem{cloud computing}{Amazon Web Services - wide variety of services including development of tools %
+    running on Lambda and utilizing SQS, deploying infrastructure with CloudFormation and Beanstalk, %
+    managing containers with ECS. \newpara
+    Eucalyptus.}
 \cvitem{cm}{Ansible, Chef, basics of Puppet.}
-\cvitem{ci}{Jenkins, TravisiCI.}
-\cvitem{cloud computing \& virtualization}{
-    \begin{itemize}
-        \item Amazon Web Services (wide variety of services including development of tools running on Lambda and utilizing SQS, developing infrastructure with CloudFormation and Beanstalk, managing containers with ECS), Eucalyptus.
-        \item Citrix XenServer, VMware vSphere.
-        \item Docker.
-    \end{itemize}}
+\cvitem{containers}{Docker.}
+\cvitem{scripting}{Bash, Python (including libraries like Boto3, docker-py, Flask, SQLAlchemy, basics of Django).}
 \cvitem{monitoring}{NewRelic, Librato, CloudWatch.}
-\cvitem{networking}{Practical understanding of TCP/IP networks, configuring network elements, troubleshooting. VPCs.}
+\cvitem{cvs}{GIT, Subversion.}
+\cvitem{ci}{Jenkins, Travis CI.}
+\cvitem{virtualization}{Citrix XenServer, VMware vSphere.}
+\cvitem{networking}{Practical understanding of TCP/IP networks, configuring network elements, troubleshooting; VPCs.}
 \cvitem{rdms}{Administration of PostgreSQL, basics of SQL.}
 \cvitem{nosql \& bigdata}{Basics of administration of CouchDB and ELK stack.}
 \cvitem{code analysis}{SonarQube and related tools.}
