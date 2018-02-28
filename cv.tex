@@ -4,8 +4,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.77]{geometry}
 
-\input{skypesymbol}
-\input{getenv}
 \newcommand{\pin}{
     \includegraphics[height=\heightof{M}]{pin}
 }
@@ -16,29 +14,33 @@
 \moderncvstyle{classic}
 \moderncvcolor{blue}
 \nopagenumbers{}
-\getenv[\lang]{lang}
 
 \name{Jacek}{Szubert}
 \address{\pin Sydney, Australia}
 \phone[mobile]{+61~416~017~284}
 \email{jacek.szubert@gmail.com}
-\extrainfo{\skypesymbol \href{skype:szubert.jacek}{szubert.jacek}}
 \social[linkedin]{jacek-szubert-16b76370}
 
 \begin{document}
 \makecvtitle
-Experienced DevOps engineer focused on cloud computing, managing infrastructure as code, %
-automation of software integration, deployment processes and configuration management.
+Experienced DevOps engineer focused on cloud computing, containerization, managing infrastructure as code, %
+automation of software integration and deployment processes and configuration management.
 \newpara
 Key technologies: Linux, AWS, Docker, Ansible, Salt, Python.
 
-\ifdefstring{\lang}{au}{\newpara Open for both permanent and contract jobs in Sydney.}{}
-
 \section{Experience}
 
-\cventry{2017}{DevOps Engineer}{Bigtincan}{Sydney}{Australia}{
-    Developing and maintaining cloud infrastructure and configuration management
-    for highly available project.
+\cventry{2017}{Senior DevOps Engineer}{Bigtincan}{Sydney}{Australia}{
+    Developing and maintaining cloud infrastructure for highly available project composed of multiple microservices
+    and utilizing multiple cloud specific, open source and commercial components. %
+    Working on the following aspects:
+\begin{itemize}
+    \item infrastructure management,
+    \item infrastructure and service monitoring, logging and alerting,
+    \item continuous integration and deployment processes,
+    \item infrastructure and systems security (including ISO 27001),
+    \item dockerizing projects and implementing container management platform.
+\end{itemize}
 }
 
 \cventry{2016}{Senior DevOps Engineer (freelance)}{eHealth Systems Africa}{Berlin}{Germany}{
@@ -57,7 +59,7 @@ Key technologies: Linux, AWS, Docker, Ansible, Salt, Python.
     \item Administration of physical and virtualised servers and storages.
     \item Administration of Linux systems, including usage of configuration management tools.
     \item Scripting in Bash and Python.
-    \item Developing and optimizing continuous integration flows and release processes of C/C++ and Java projects.
+    \item Developing continuous integration and release processes of C/C++ and Java projects.
     \item Quality assurance - analysis using SonarQube, preparation for TL9000 audit.
     \item Taking over a project from other company, responsible for both competence and infrastructure transfer.
 \end{itemize}
@@ -72,28 +74,24 @@ Key technologies: Linux, AWS, Docker, Ansible, Salt, Python.
     {Electronics and Telecommunication --- Information and Communication Networks.}
 %\cventry{2009--2013}{Vocational Technical High School}{CKU}{Częstochowa}{}{Occupational safety and health.}
 
-\section{Languages}
-\cvitemwithcomment{english}{professional working proficiency}{IELTS}
-\cvitemwithcomment{polish}{native}{}
-
 \clearpage
 
 \section{Skills}
-\cvitem{administration}{Linux - RHEL and Debian based distributions, CoreOS.}
-\cvitem{cloud computing}{Amazon Web Services - wide variety of services including development
-    of serverless tools, deploying infrastructure with CloudFormation and Terraform, %
-    managing containers with Beanstalk and ECS. \newpara
+\cvitem{administration}{Linux - RHEL and Debian based distributions.}
+\cvitem{cloud computing}{Amazon Web Services - wide variety of services, %
+    managing infrastructure with CloudFormation and Terraform. \newpara
     Eucalyptus.}
-\cvitem{cm}{Ansible, Salt, Chef, basics of Puppet.}
-\cvitem{containers}{Docker, ECS.}
-\cvitem{scripting}{Bash, Python.}
-\cvitem{monitoring}{NewRelic, Librato, CloudWatch.}
+\cvitem{cm}{Salt, Ansible, basics of Chef and Puppet.}
+\cvitem{containers}{Docker, Kubernetes, ECS.}
+\cvitem{scripting}{Bash, Python, basics of: Node.js, Golang, Groovy.}
+\cvitem{monitoring}{InfluxDB, Grafana, NewRelic, CloudWatch.}
 \cvitem{vcs}{GIT, Subversion.}
-\cvitem{ci}{Jenkins, Travis CI, LambCI.}
+\cvitem{ci}{Jenkins, Travis CI, LambCI, AWS CodePipeline.}
 \cvitem{virtualization}{Citrix XenServer, VMware vSphere.}
 \cvitem{networking}{Practical understanding of TCP/IP networks, configuring network elements, troubleshooting; VPCs.}
-\cvitem{rdms}{Administration of PostgreSQL, MySQL, basics of SQL.}
-\cvitem{nosql \& bigdata}{Basics of administration of CouchDB and ELK stack.}
+\cvitem{rdms}{Administration of MySQL, PostresSQL.}
+\cvitem{nosql \& bigdata}{ELK stack, basics of CouchDB.}
+\cvitem{web servers}{Apache, Nginx}
 \cvitem{code analysis}{SonarQube and related tools.}
 \cvitem{hardware}{HP Server Hardware, NetApp.}
 
@@ -103,14 +101,12 @@ Key technologies: Linux, AWS, Docker, Ansible, Salt, Python.
 \cvitem{networking}{Cisco Certified Network Associate.}
 \cvitem{english}{IELTS general training certification (C1).}
 
+\section{Languages}
+\cvitemwithcomment{english}{professional working proficiency}{IELTS}
+\cvitemwithcomment{polish}{native}{}
+
 \newdateformat{mydate}{\THEDAY\ \monthname[\THEMONTH] \THEYEAR}
 
-\ifdefstring{\lang}{pl}{
-    \cfoot{\footnotesize{I hereby agree for processing the following personal information strictly for %
-    the purposes of job recruitment \newline in accordance with the regulation for the protection of %
-    personal data passed on 29.08.1997, Dz.U nr 133 poz. 883.}\newline\hspace{1in}{\tiny{\shortdate\today}}}
-}{
-    \cfoot{\tiny{\shortdate\today}}
-}
+\cfoot{\tiny{\shortdate\today}}
 
 \end{document}
