@@ -8,50 +8,37 @@
 \linespread{1.3}
 
 \input{getenv}
-\getenv[\porozumienie]{porozumienie}
 
-\renewcommand{\today}{\CityOfTermination, \number\day.\number\month.\number\year}
+\renewcommand{\today}{\number\day.\number\month.\number\year}
 
 %Your details
 \def\Name{name}
-\def\Address{street \\ city \\ country}
+\def\Address{street \\ city}
 \def\Phone{phone}
 \def\Email{mail}
 \def\Details{\Name \\ \Address \\ \Phone \\ \Email}
 
 %Company details
-\def\CompanyName{company}
-\def\CompanyAddress{company address}
-\def\CompanyDetails{\CompanyName \\ \CompanyAddress}
+\def\ManagerName{Manager's name}
+\def\CompanyName{Company}
+\def\CompanyAddress{Company address}
+\def\CompanyDetails{\ManagerName \\ \CompanyName \\ \CompanyAddress}
 
 %Contract details
 \def\DateOfContract{date}
-\def\CityOfContract{city}
-\def\CityOfTermination{\CityOfContract}
-
-%Termination duration - exact date for settlement or duration for other cases
-\def\TerminationDuration{2 tygodnie}
+\def\LastDay{lastday}
 
 \address{\Details}
 \begin{document}
 \begin{letter}{\CompanyDetails}
 {
-    \ifdefstring{\porozumienie}{true}{
-        \opening{\noindent Porozumienie stron w sprawie rozwiązania mowy o pracę}{}
-            Strony zgodnie postanawiają, że z dniem \TerminationDuration ulega %
-            rozwiązaniu umowa o pracę zawarta w dniu \DateOfContract{} w miejscowości %
-            \CityOfContract{} pomiędzy \Name{} a \CompanyName{}. \\ \\
-            \begin{minipage}[c]{0.5\textwidth} \ldots \\ Pracownik \end{minipage}
-            \begin{minipage}[c]{0.5\textwidth} \ldots \\ Pracodawca \end{minipage}
+    \opening{\noindent Resignation letter}{}
+        Please accept this letter as a formal notification of my resignation from \CompanyName{}. My last day with the company will be \LastDay{}. %
 
-    }{
-        \opening{\noindent Wypowiedzenie umowy o pracę}{}
-            Niniejszym wypowiadam umowę o pracę zawartą dnia \DateOfContract{} %
-            w miejscowości \CityOfContract{} pomiędzy \Name{} a \CompanyName{} z zachowaniem %
-            okresu wypowiedzenia wynoszącego \TerminationDuration.
-        \closing{Z poważaniem, \\ \ldots \\ \Name}
-        {\noindent Potwierdzam otrzymanie wypowiedzenia \\ \ldots}
-    }
+        Before I leave, I will ensure that all my projects are completed as far as possible, and I am happy to assist in any way to ensure a smooth handover to my replacement.
+
+        I would like to thank you for the opportunity to work at \CompanyName{}.
+    \closing{Kind regards, \\ \ldots \\ \Name}
 }
 \end{letter}
 \end{document}
