@@ -10,26 +10,13 @@
 
 \renewcommand{\today}{\number\day.\number\month.\number\year}
 
-%Your details
-\def\Name{name}
-\def\Address{street \\ city}
-\def\Phone{phone}
-\def\Email{mail}
-\def\Details{\Name \\ \Address \\ \Phone \\ \Email}
+\input{.env.termination}
 
-%Company details
-\def\ManagerName{Manager's name}
-\def\CompanyName{Company}
-\def\CompanyAddress{Company address}
-\def\CompanyDetails{\ManagerName \\ \CompanyName \\ \CompanyAddress}
+\def\CompanyDetails{\ManagerName{} \\ \CompanyName{} \\ \CompanyAddress{}}
 
-%Contract details
-\def\DateOfContract{date}
-\def\LastDay{lastday}
-
-\address{\Details}
+\address{\Name{} \\ \Contact{}}
 \begin{document}
-\begin{letter}{\CompanyDetails}
+\begin{letter}{\CompanyDetails{}}
 {
     \opening{\noindent Resignation letter}{}
         Please accept this letter as a formal notification of my resignation from \CompanyName{}. My last day with the company will be \LastDay{}. %

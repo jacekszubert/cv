@@ -161,3 +161,6 @@ TSWLatexianTemp*
 # temp files
 *~
 *.swp
+
+# env config files
+.env.termination
