@@ -4,10 +4,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.77]{geometry}
 
-\newcommand{\pin}{
-    \includegraphics[height=\heightof{M}]{pin}
+\newcommand{\pin}{%
+    \includegraphics[height=\heightof{M}]{pin}%
 }
-\newcommand{\newpara}{
+\newcommand{\newpara}{%
     \vskip 0.2cm
 }
 
@@ -16,95 +16,108 @@
 \nopagenumbers{}
 
 \name{Jacek}{Szubert}
-\address{\pin Sydney, Australia}
+\address{\pin{} Sydney, Australia}
 \phone[mobile]{+61~416~017~284}
 \email{jacek.szubert@gmail.com}
-\social[linkedin]{jacek-szubert-16b76370}
+\social[linkedin][https://www.linkedin.com/in/jacek-szubert-16b76370]{jacek-szubert-16b76370}
+
 
 \begin{document}
-\makecvtitle
+\makecvtitle{}
 Experienced DevOps engineer focused on cloud computing, containerization, managing infrastructure as code, %
 automation of software integration and deployment processes and configuration management.
-\newpara
-Key technologies: Linux, AWS, Docker, Ansible, Salt, Python.
+\newpara{}
+Key technologies: Linux, AWS, Docker, Kubernetes, Python, SaltStack.
 
 \section{Experience}
 
-\cventry{2017--now}{Senior DevOps Engineer}{Bigtincan}{Sydney}{Australia}{
-    Developing and maintaining cloud infrastructure for highly available project composed of multiple microservices
-    and utilizing multiple cloud specific, open source and commercial components. %
+\cventry[1em]{2017--now}{Senior DevOps Engineer}{Bigtincan}{Sydney}{Australia}{%
+    Designin, developing and maintaining cloud infrastructure and DevOps processes for highly available global projects. %
+    Utilizing multiple cloud-specific, open source and commercial components. %
     Working on the following aspects:
 \begin{itemize}
-    \item infrastructure management,
-    \item infrastructure and service monitoring, logging and alerting,
-    \item continuous integration and deployment processes,
-    \item infrastructure and systems security (including ISO 27001),
-    \item dockerizing projects and implementing container management platform.
+    \item infrastructure management --- implementing \textit{everything as code} approach using AWS\,CloudFormation and other tooling;
+    \item infrastructure and service monitoring, logging and alerting --- using Grafana, InfluxDB, Graylog and other tools;
+    \item continuous integration and deployment processes --- Jenkins, SaltStack, Helm;
+    \item infrastructure and systems security (including ISO\,27001 requirements) --- implementing security best practices, patching approach, intrusion detection and prevention;
+    \item containerizing projects and implementing container management platform --- Docker, Kubernetes, Istio;
+    \item supporting gradual migration from monolithic towards more granular, service oriented architecture.
 \end{itemize}
+    \newpara{}
+    Technologies: Linux, AWS, SaltStack, Docker, Kubernetes, Python.
 }
 
-\cventry{2016}{Senior DevOps Engineer (freelance)}{eHealth Systems Africa}{Berlin}{Germany}{
+\cventry[1em]{2016}{Senior DevOps Engineer}{eHealth Systems Africa}{Berlin}{Germany}{%
     Working on multiple cloud-based projects supporting public health in Western Africa. %
     Implementing and optimizing infrastructure management approach, deployment strategies, %
-    monitoring solutions, mitigating security risks, reducing infrastructure costs.
+    monitoring solutions, mitigating security risks, reducing infrastructure costs.%
+    \newpara{}
+    Technologies: Linux, Ansible, Docker, Python, AWS, NewRelic, Travis CI\@.
 }
 
-\cventry{2015--2016}{DevOps Engineer}{SoftServe}{Wroclaw}{Poland}{
+\cventry[1em]{2015--2016}{DevOps Engineer}{SoftServe}{Wroclaw}{Poland}{%
     Developing cloud based infrastructure and CI \& CD pipelines for web services.
+    \newpara{}
+    Technologies: Linux, AWS, Docker, Jenkins, Python.
 }
 
-\cventry{2013--2015}{Software Integration Engineer (SCM)}{Nokia / Nokia Solutions and Networks}%
-    {Wroclaw}{Poland}{Technical leader for DevOps/SysAdmin teams responsible for two projects.
+\cventry[1em]{2013--2015}{Software Integration Engineer (SCM)}{Nokia}{Wroclaw}{Poland}{%
+    Technical leader for DevOps/SysAdmin teams responsible for two large scale projects.
 \begin{itemize}
     \item Administration of physical and virtualised servers and storages.
     \item Administration of Linux systems, including usage of configuration management tools.
     \item Scripting in Bash and Python.
     \item Developing continuous integration and release processes of C/C++ and Java projects.
-    \item Quality assurance - analysis using SonarQube, preparation for TL9000 audit.
+    \item Quality assurance --- analysis using SonarQube, preparation for TL9000 audit.
     \item Taking over a project from other company, responsible for both competence and infrastructure transfer.
 \end{itemize}
+    \newpara{}
+    Technologies: Linux, Eucalyptus, Jenkins, Bash, Python, SonarQube, VMWare, Xen, HP\,Server Hardware.
 }
 
-\cventry{2012}{OSS Technical Support -- internship}{Nokia Siemens Networks}{Wroclaw}{Poland}%
-    {Local laboratory administration, basic configuration and verification of OSS systems.}
+\cventry[1em]{2012}{OSS Technical Support --- internship}{Nokia Siemens Networks}{Wroclaw}{Poland}{%
+    Local laboratory administration, basic configuration and verification of OSS systems.
+}
+
 
 \section{Education}
-\cventry{2013--2015}{Master's degree}{Wroclaw University of Technology}{Poland}{}{Telecommunication --- Mobile Networks.}
-\cventry{2009--2013}{Bachelor's degree}{Wroclaw University of Technology}{Poland}{}%
+\cventry[1em]{2013--2015}{Master's degree}{Wroclaw University of Technology}{Poland}{}{Telecommunication --- Mobile Networks.}
+\cventry[1em]{2009--2013}{Bachelor's degree}{Wroclaw University of Technology}{Poland}{}%
     {Electronics and Telecommunication --- Information and Communication Networks.}
-%\cventry{2009--2013}{Vocational Technical High School}{CKU}{Częstochowa}{}{Occupational safety and health.}
+%\cventry[1em]{2009--2013}{Vocational Technical High School}{CKU}{Częstochowa}{}{Occupational safety and health.}
 
-\clearpage
 
 \section{Skills}
-\cvitem{administration}{Linux - RHEL and Debian based distributions.}
-\cvitem{cloud computing}{Amazon Web Services - wide variety of services, %
-    managing infrastructure with CloudFormation and Terraform. \newpara
+\cvitem{os}{Linux --- RHEL and Debian based distributions.}
+\cvitem{cloud}{Amazon Web Services --- wide variety of services, %
+    managing infrastructure with AWS\,CloudFormation and Terraform. \newpara{}
     Eucalyptus.}
-\cvitem{cm}{Salt, Ansible, basics of Chef and Puppet.}
-\cvitem{containers}{Docker, Kubernetes, ECS.}
+\cvitem{cm}{SaltStack, Ansible, basics of Chef and Puppet.}
+\cvitem{containers}{Docker, Kubernetes, AWS\,ECS.}
 \cvitem{scripting}{Bash, Python, basics of: Node.js, Golang, Groovy.}
-\cvitem{monitoring}{InfluxDB, Grafana, NewRelic, CloudWatch.}
+\cvitem{monitoring}{InfluxDB, Grafana, NewRelic, AWS\,CloudWatch.}
 \cvitem{vcs}{GIT, Subversion.}
-\cvitem{ci}{Jenkins, Travis CI, LambCI, AWS CodePipeline.}
+\cvitem{ci}{Jenkins, Travis CI, LambCI, AWS\,CodePipeline.}
 \cvitem{virtualization}{Citrix XenServer, VMware vSphere.}
 \cvitem{networking}{Practical understanding of TCP/IP networks, configuring network elements, troubleshooting; VPCs.}
-\cvitem{rdms}{Administration of MySQL, PostresSQL.}
-\cvitem{nosql \& bigdata}{ELK stack, basics of CouchDB.}
+\cvitem{rdms}{MySQL, PostresSQL.}
+\cvitem{nosql}{ELK stack, basics of CouchDB.}
 \cvitem{web servers}{Apache, Nginx}
 \cvitem{code analysis}{SonarQube and related tools.}
 \cvitem{hardware}{HP Server Hardware, NetApp.}
 
+
 \section{Training and certifications}
-\cvitem{cloud computing}{AWS Certified DevOps Engineer - Professional.}
-\cvitem{cloud computing}{AWS Certified Developer -- Associate.}
+\cvitem{cloud computing}{AWS Certified DevOps Engineer --- Professional.}
+\cvitem{cloud computing}{AWS Certified Developer --- Associate.}
 \cvitem{embedded}{Designing Embedded Systems with Yocto (Doulos).}
 \cvitem{networking}{Cisco Certified Network Associate.}
-\cvitem{english}{IELTS general training certification (C1).}
+
 
 \section{Languages}
-\cvitemwithcomment{english}{professional working proficiency}{IELTS}
+\cvitemwithcomment{english}{professional working proficiency}{}
 \cvitemwithcomment{polish}{native}{}
+
 
 \newdateformat{mydate}{\THEDAY\ \monthname[\THEMONTH] \THEYEAR}
 
