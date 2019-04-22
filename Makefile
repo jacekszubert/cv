@@ -16,7 +16,7 @@ cv.pdf: cv.tex pin.pdf
 pin.pdf: pin.tex
 	$(TEX) pin.tex
 
-termination.pdf: termination.tex
+termination.pdf: termination.tex .env.termination
 	if ! [ -f .env.termination ]; then \
 		cp .env.termination.dist .env.termination; \
 	fi
