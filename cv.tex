@@ -3,12 +3,24 @@
 \usepackage[nodayofweek]{datetime}
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.77]{geometry}
+\usepackage{datenumber,fp}
 
 \newcommand{\pin}{%
     \includegraphics[height=\heightof{M}]{pin}%
 }
 \newcommand{\newpara}{%
     \vskip 0.2cm
+}
+
+\newcommand{\experience}{%
+\newcounter{expStartDate}%
+\newcounter{expEndDate}%
+\setmydatenumber{expStartDate}{2013}{01}{01}%
+\setmydatenumber{expEndDate}{\the\year}{\the\month}{\the\day}%
+\FPsub\expResultSub{\theexpEndDate}{\theexpStartDate}%
+\FPdiv\expResult{\expResultSub}{365}%
+\pgfmathparse{int (round (\expResult))}%
+\pgfmathresult{}%
 }
 
 \moderncvstyle{classic}
@@ -24,7 +36,8 @@
 
 \begin{document}
 \makecvtitle{}
-Experienced DevOps engineer focused on cloud computing, containerization, managing infrastructure as code, %
+
+Skilled DevOps engineer with \experience{}+ years of commercial experience around cloud computing, containerization, managing infrastructure as code, %
 automation of software integration \& deployment processes and systems \& infrastructure security.
 \newpara{}
 Key technologies: Linux, AWS, Docker, Kubernetes, Python, SaltStack.
@@ -32,7 +45,7 @@ Key technologies: Linux, AWS, Docker, Kubernetes, Python, SaltStack.
 \section{Experience}
 
 \cventry[1em]{2017--now}{Senior DevOps Engineer}{Bigtincan}{Sydney}{Australia}{%
-    Designing, developing and maintaining cloud infrastructure and DevOps processes for highly available, global SaaS products. %
+    Designing, developing and maintaining cloud infrastructure and DevOps processes for highly available, global and serving high usage volumes, SaaS products. %
     Utilizing multiple cloud-specific, open source and commercial components. %
     Working on the following aspects:
 \begin{itemize}
@@ -108,7 +121,7 @@ Key technologies: Linux, AWS, Docker, Kubernetes, Python, SaltStack.
 
 
 \section{Training and certifications}
-\cvitem{cloud computing}{
+\cvitem{cloud computing}{%
     AWS Certified DevOps Engineer --- Professional, \newpara{}
     AWS Certified Developer --- Associate.
 }
