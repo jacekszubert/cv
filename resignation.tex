@@ -10,7 +10,7 @@
 
 \renewcommand{\today}{\number\day.\number\month.\number\year}
 
-\input{.env.termination}
+\input{.env.resignation}
 
 \def\CompanyDetails{\ManagerName{} \\ \CompanyName{} \\ \CompanyAddress{}}
 
@@ -19,12 +19,9 @@
 \begin{letter}{\CompanyDetails{}}
 {
     \opening{\noindent Resignation letter}{}
-        Please accept this letter as a formal notification of my resignation from \CompanyName{}. My last day with the company will be \LastDay{}. %
-
-        Before I leave, I will ensure that all my projects are completed as far as possible, and I am happy to assist in any way to ensure a smooth handover to my replacement.
-
-        I would like to thank you for the opportunity to work at \CompanyName{}.
-    \closing{Kind regards, \\ \ldots \\ \Name}
+        Please accept this letter as a formal notification of my resignation from \CompanyName{}.
+	My last day with the company will be \LastDay{}. %
+    \closing{Yours sincerely, \\ \ldots \\ \Name}
 }
 \end{letter}
 \end{document}

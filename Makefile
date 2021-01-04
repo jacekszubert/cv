@@ -2,7 +2,7 @@ TEX = pdflatex
 
 .PHONY: clean all
 
-all: cv.pdf termination.pdf
+all: cv.pdf resignation.pdf
 
 clean:
 	@rm -f *.pdf *.log *.out *.aux
@@ -16,8 +16,10 @@ cv.pdf: cv.tex pin.pdf
 pin.pdf: pin.tex
 	$(TEX) pin.tex
 
-termination.pdf: termination.tex .env.termination
-	if ! [ -f .env.termination ]; then \
-		cp .env.termination.dist .env.termination; \
+resignation.pdf: resignation.tex .env.resignation
+	$(TEX) resignation.tex
+
+.env.resignation:
+	if ! [ -f .env.resignation ]; then \
+		cp .env.resignation.dist .env.resignation; \
 	fi
-	$(TEX) termination.tex
